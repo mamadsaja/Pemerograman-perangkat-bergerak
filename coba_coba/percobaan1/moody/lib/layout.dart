@@ -17,10 +17,10 @@ class M_1201222041 extends StatelessWidget {
         children: [
           // Container dengan gradient
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: RadialGradient(
                 colors: [
-                  const Color.fromARGB(255, 255, 255, 255),
+                  Color.fromARGB(255, 255, 255, 255),
                 ],
                 center: Alignment.topRight,
                 radius: 1,
@@ -30,11 +30,11 @@ class M_1201222041 extends StatelessWidget {
             height: screenHeight, // Menggunakan persentase dari tinggi layar
           ),
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: RadialGradient(
                 colors: [
-                  const Color.fromARGB(255, 2, 8, 44), 
-                  const Color.fromARGB(255, 53, 11, 170)
+                  Color.fromARGB(255, 2, 8, 44), 
+                  Color.fromARGB(255, 53, 11, 170)
                   // const Color.fromARGB(255, 255, 255, 255),
                 ],
                 center: Alignment.topRight,
@@ -43,14 +43,14 @@ class M_1201222041 extends StatelessWidget {
             ),
             width: screenWidth,
             height: 230,
-            padding: EdgeInsets.only(bottom: 10, left: 15),
+            padding: const EdgeInsets.only(bottom: 10, left: 15),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget> [
                 Transform.translate(
-                  offset: Offset(25, 70),
-                  child: Text(
+                  offset: const Offset(25, 70),
+                  child: const Text(
                     "Hello, Muhammad",
                     style: TextStyle(
                       color: Colors.white,
@@ -63,7 +63,7 @@ class M_1201222041 extends StatelessWidget {
                 SizedBox(height: 10),
                 Transform.translate(
                   offset: Offset(25, 60),
-                  child: Text(
+                  child: const Text(
                     "Welcome Back",
                     style: TextStyle(
                       color: Colors.white,
@@ -99,7 +99,7 @@ class M_1201222041 extends StatelessWidget {
                 children: <Widget>[
                   Transform.translate(
                     offset: Offset(30, 20),
-                    child: Text(
+                    child: const Text(
                       "NIM",
                       style: TextStyle(
                         color: Colors.black,
@@ -112,7 +112,7 @@ class M_1201222041 extends StatelessWidget {
                     SizedBox(height: 10),
                     Transform.translate(
                       offset: Offset(30, 10),
-                      child: Text(
+                      child: const Text(
                         "1201222041",
                         style: TextStyle(
                           color: Colors.black,
@@ -124,7 +124,7 @@ class M_1201222041 extends StatelessWidget {
                     SizedBox(height: 0),
                     Transform.translate(
                       offset: Offset(30, 10), 
-                      child: Text(
+                      child: const Text(
                         "Status :",
                         style: TextStyle(
                           color: Colors.black,
@@ -136,7 +136,7 @@ class M_1201222041 extends StatelessWidget {
                     SizedBox(height: 10,),
                     Transform.translate(
                       offset: Offset(30, 0),
-                      child: Text(
+                      child: const Text(
                         "Mahasiswa",
                         style: TextStyle(
                           color: Colors.black,
@@ -158,10 +158,10 @@ class M_1201222041 extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
                 // color: const Color.fromARGB(206, 67, 21, 195),
-                gradient: RadialGradient(
+                gradient: const RadialGradient(
                   colors: <Color>[
-                    const Color.fromARGB(176, 255, 255, 255),
-                    const Color.fromARGB(255, 53, 11, 170),
+                    Color.fromARGB(176, 255, 255, 255),
+                    Color.fromARGB(255, 53, 11, 170),
                   ],
                   center: Alignment.topRight,
                   radius: 5,
@@ -181,10 +181,10 @@ class M_1201222041 extends StatelessWidget {
                 children: <Widget>[
                   Transform.translate(
                     offset: Offset(20, 13),
-                    child: Text(
+                    child: const Text(
                       "Jadwal",
                       style: TextStyle(
-                        color: const Color.fromARGB(255, 255, 255, 255),
+                        color: Color.fromARGB(255, 255, 255, 255),
                         fontSize: 22,
                         fontWeight: FontWeight.w500,
                         fontFamily: 'Poppins',
@@ -201,7 +201,7 @@ class M_1201222041 extends StatelessWidget {
             child: Container(
               width: screenWidth * 0.85,
               height: screenHeight * 0.43,
-              child:SingleChildScrollView(
+              child:const SingleChildScrollView(
                   child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -580,7 +580,7 @@ class M_1201222041 extends StatelessWidget {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.qr_code_scanner,
-              size: 50,
+              size: 35,
               color: Colors.purple, 
             ),
             label: '',
