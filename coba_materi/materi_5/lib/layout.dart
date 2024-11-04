@@ -22,7 +22,16 @@ class _ButtonScreenState extends State<Buttonscreen>{
                 style: TextButton.styleFrom(
                   backgroundColor: Colors.amber[700]   
                 ),
-                onPressed: () {}, 
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      duration: Duration(seconds: 5),
+                      content: Text('pesan berhasil'),
+                      action: SnackBarAction(label: 'Detail', onPressed: () {},
+                      ),
+                    )
+                  );
+                }, 
                 child: const Text(
                   'text button',
                   style: TextStyle(
@@ -36,7 +45,23 @@ class _ButtonScreenState extends State<Buttonscreen>{
                 style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue[400],
                 ),
-                onPressed: () {}, 
+                onPressed: () {
+                  showDialog(context: context, builder: (context) {
+                    return AlertDialog(
+                      title: Text('hapus data'),
+                      content: Text('Apakah anda yakin untuk menghapusnya'),
+                      actions: [
+                        TextButton(onPressed: () {
+                          Navigator.pop(context);
+                        }, child: const Text('NO')
+                        ),
+                        TextButton(onPressed: () {}, child: const Text('yes')
+                        ),
+                      ],
+                    );  
+                  },
+                  );
+                }, 
                 child: const Text(
                   'elevated button',
                   style: TextStyle(
@@ -50,7 +75,21 @@ class _ButtonScreenState extends State<Buttonscreen>{
                 style: OutlinedButton.styleFrom(
                   backgroundColor: Colors.green[600],
                 ),
-                onPressed: () {}, 
+                onPressed: () {
+                  showDialog(context: context, builder: (context) {
+                    return SimpleDialog(
+                      title: const Text('Pilih Metode'),
+                      children: [
+                        SimpleDialogOption(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: const Text('BCA'),
+                        ),
+                      ],
+                    );
+                  },);
+                }, 
               child: const Text(
                 'outline button',
                 style: TextStyle(
